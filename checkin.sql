@@ -28,7 +28,5 @@ id_atividade integer not null unique references atividade,
 id_participante integer not null unique references participante
 );
 
-insert into Usuario values (null , 'larissa' , '123');
-
 create user if not exists 'checkin'@'localhost' identified by '123';
 grant all privileges on checkin.* to 'checkin'@'localhost';
